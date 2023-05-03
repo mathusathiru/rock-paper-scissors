@@ -79,29 +79,29 @@ def open_player(player1_letter, player2_letter):
     # PLAYER 1 OPTIONS
     # buttons for player 1 to select input
     
-    player1_rock = ttk.Button(window_a, text="Rock", command=lambda:player1_option("R"))
+    player1_rock = ttk.Button(window_a, text="Rock", command=lambda:player1_option("R"), takefocus=False)
     player1_rock.grid(row=1, column=1, padx=5)
     
-    player1_paper = ttk.Button(window_a, text="Paper", command=lambda:player1_option("P"))
+    player1_paper = ttk.Button(window_a, text="Paper", command=lambda:player1_option("P"), takefocus=False)
     player1_paper.grid(row=1, column=2, padx=5)
     
-    player1_scissors = ttk.Button(window_a, text="Scissors", command=lambda:player1_option("S"))
+    player1_scissors = ttk.Button(window_a, text="Scissors", command=lambda:player1_option("S"), takefocus=False)
     player1_scissors.grid(row=1, column=3, padx=5)
 
     # PLAYER 1 OPTIONS
     # buttons for player 1 to select input
     
-    player2_rock = ttk.Button(window_a, text="Rock", command=lambda:player2_option("R"))
+    player2_rock = ttk.Button(window_a, text="Rock", command=lambda:player2_option("R"), takefocus=False)
     player2_rock.grid(row=2, column=1, padx=5)
     
-    player2_paper = ttk.Button(window_a, text="Paper", command=lambda:player2_option("P"))
+    player2_paper = ttk.Button(window_a, text="Paper", command=lambda:player2_option("P"), takefocus=False)
     player2_paper.grid(row=2, column=2, padx=5)
     
-    player2_scissors = ttk.Button(window_a, text="Scissors", command=lambda:player2_option("S"))
+    player2_scissors = ttk.Button(window_a, text="Scissors", command=lambda:player2_option("S"), takefocus=False)
     player2_scissors.grid(row=2, column=3, padx=5)
 
     # button to determine winner from close_players() function  
-    winner_button = ttk.Button(window_a, text="Winner", command=lambda:close_players())
+    winner_button = ttk.Button(window_a, text="Winner", command=lambda:close_players(), takefocus=False)
     winner_button.grid(row=3, column=2, sticky=tk.W, padx=5, pady=15)
 
     # text label displaying winner from close_players() function
@@ -182,13 +182,13 @@ def open_computer(player1_letter):
     # PLAYER OPTIONS
     # buttons for player to select input
     
-    player_rock = ttk.Button(window_b, text="Rock", command=lambda:single_player("R"))
+    player_rock = ttk.Button(window_b, text="Rock", command=lambda:single_player("R"), takefocus=False)
     player_rock.grid(row=1, column=1, padx=5)   
 
-    player_paper = ttk.Button(window_b, text="Paper", command=lambda:single_player("P"))
+    player_paper = ttk.Button(window_b, text="Paper", command=lambda:single_player("P"), takefocus=False)
     player_paper.grid(row=1, column=2, padx=5)
     
-    player_scissors = ttk.Button(window_b, text="Scissors", command=lambda:single_player("S"))
+    player_scissors = ttk.Button(window_b, text="Scissors", command=lambda:single_player("S"), takefocus=False)
     player_scissors.grid(row=1, column=3, padx=5)
 
     # text label displaying computer result from computer_option() function
@@ -197,7 +197,7 @@ def open_computer(player1_letter):
     computer_result.grid(row=2, column=1, padx=5, pady=10)
 
     # button to determine winner from computer_option() function 
-    comp_win_button = ttk.Button(window_b, text="Winner", command=lambda:computer_option())
+    comp_win_button = ttk.Button(window_b, text="Winner", command=lambda:computer_option(), takefocus=False)
     comp_win_button.grid(row=3, column=2, sticky=tk.W, padx=5, pady=15)
 
     # text label displaying winner from computer_winner() function
@@ -226,9 +226,9 @@ intro = tk.Label(root, text="Rock Paper Scissors")
 intro.grid(row=0, columnspan = 2, sticky=tk.N, padx=10, pady=35)
     
 # button to play PLAYER VS PLAYER
-button_player = ttk.Button(root, text="Player VS Player", command=lambda:open_player(player1_letter, player2_letter))
+button_player = ttk.Button(root, text="Player VS Player", command=lambda:open_player(player1_letter, player2_letter), takefocus=False)
 button_player.grid(row=1, column=0, padx=40, pady=10)
 
 # button to play PLAYER VS COMPUTER
-button_computer = ttk.Button(root, text="Player VS Computer", command=lambda:open_computer(player1_letter))
+button_computer = ttk.Button(root, text="Player VS Computer", command=lambda:open_computer(player1_letter), takefocus=False)
 button_computer.grid(row=1, column=1, padx=20, pady=10)
